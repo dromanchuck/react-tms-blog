@@ -1,0 +1,36 @@
+.primary {
+  color: white;
+  background-color: #07344a;
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.secondary {
+  color: #07344a;
+  background-color: white;
+  border: 1px solid #07344a;
+  height: 50px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.text {
+  color: #07344a;
+  width: 100%;
+  background: none;
+  border: none;
+  height: 50px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}

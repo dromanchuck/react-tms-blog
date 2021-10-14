@@ -8,7 +8,6 @@
   transition: all 0.3s linear;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
 }
 
 .container:hover {

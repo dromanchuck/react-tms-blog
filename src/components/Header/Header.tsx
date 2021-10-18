@@ -4,6 +4,7 @@ import styles from "./Header.module.css";
 
 export const Header = () => {
   const [isSmall, setIsSmall] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 150) {
@@ -20,10 +21,8 @@ export const Header = () => {
     };
   }, []);
 
-  return isSmall ? (
-    <div className={styles["small-container"]}></div>
-  ) : (
-    <div className={styles.container}>
+  return (
+    <div className={styles.container} style={{ height: isSmall ? 50 : 150 }}>
       <NavLink
         exact
         to="/"
@@ -32,22 +31,24 @@ export const Header = () => {
       >
         Posts
       </NavLink>
-      <NavLink
-        exact
-        to="/register"
-        className={styles.link}
-        activeClassName={styles["active-link"]}
-      >
-        Register
-      </NavLink>
-      <NavLink
-        exact
-        to="/login"
-        className={styles.link}
-        activeClassName={styles["active-link"]}
-      >
-        Login
-      </NavLink>
+      <div>
+        <NavLink
+          exact
+          to="/register"
+          className={styles.link}
+          activeClassName={styles["active-link"]}
+        >
+          Register
+        </NavLink>
+        <NavLink
+          exact
+          to="/login"
+          className={styles.link}
+          activeClassName={styles["active-link"]}
+        >
+          Login
+        </NavLink>
+      </div>
     </div>
   );
 };

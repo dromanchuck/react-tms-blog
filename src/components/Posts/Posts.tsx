@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { ACTIONS } from "../../redux/constants";
 
 import { IState } from "../../redux/store";
-import { getPosts } from "../../services/posts";
 import { Container } from "../Container";
 
 import { PostCard } from "../PostCard";
@@ -14,9 +13,7 @@ export const Posts = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    getPosts().then((posts) => {
-      dispatch({ type: ACTIONS.GET_POSTS_SUCCESS, posts });
-    });
+    dispatch({ type: ACTIONS.GET_POSTS });
   }, []);
 
   return (

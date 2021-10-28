@@ -3,9 +3,10 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  background-size: cover;
   height: 100%;
   width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .title {

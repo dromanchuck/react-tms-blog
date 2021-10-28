@@ -1,6 +1,6 @@
 import { takeEvery, call, put } from "redux-saga/effects";
 
-import { getPosts } from "../../services/posts";
+import { getPosts, getPost } from "../../services/posts";
 import { ACTIONS } from "../constants";
 
 function* getPostsSaga() {
@@ -11,6 +11,17 @@ function* getPostsSaga() {
   } catch {}
 }
 
+function* getPostSaga(action) {
+  const { id } = action;
+
+  try {
+    const post = yield call(() => getPost(id));
+
+    yield put({ type: ACTIONS.GET_POST_SUCCESS, post });
+  } catch {}
+}
+
 export function* postsWatcher() {
   yield takeEvery(ACTIONS.GET_POSTS, getPostsSaga);
+  yield takeEvery(ACTIONS.GET_POST, getPostSaga);
 }

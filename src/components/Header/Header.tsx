@@ -7,11 +7,11 @@ export const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 150) {
+      if (window.pageYOffset > 120) {
         setIsSmall(true);
       }
 
-      if (window.pageYOffset <= 150) {
+      if (window.pageYOffset <= 120) {
         setIsSmall(false);
       }
     });

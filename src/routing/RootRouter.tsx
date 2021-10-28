@@ -5,6 +5,7 @@ import { Posts } from "../components/Posts";
 import { Register } from "../components/Register/Register";
 import { NotFound } from "../components/NotFound";
 import { Header } from "../components/Header";
+import { Post } from "../components/Post";
 
 export function RootRouter() {
   return (
@@ -20,6 +21,9 @@ export function RootRouter() {
           </Route>
           <Route exact path="/register">
             <Register />
+          </Route>
+          <Route exact path="/posts/:id">
+            <Post />
           </Route>
           <Route exact>
             <NotFound />

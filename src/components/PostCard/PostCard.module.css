@@ -9,6 +9,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  width: calc(100% - 158px);
 }
 
 .container:hover {

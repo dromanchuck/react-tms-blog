@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  width: 200px;
+}
+
+.input {
+  color: white;
+}

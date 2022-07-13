@@ -1,0 +1,18 @@
+.button {
+  width: 100px;
+  height: 80px;
+  color: white;
+}
+
+.primary {
+  background-color: cadetblue;
+}
+
+.secondary {
+  background-color: bisque;
+  color: black;
+}
+
+.disabled {
+  background-color: grey;
+}

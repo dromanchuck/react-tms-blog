@@ -15,18 +15,24 @@ import { AuthContext, AuthProvider } from "./context/AuthContext";
 import { useContext, useEffect } from "react";
 import { tmsFetch } from "./fetch";
 import { AddPost } from "./components/AddPost/AddPost";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import { ReduxList } from "./components/List/ReduxList";
 
 function App() {
   return (
-    <AuthProvider>
-      <PostsProvider>
-        <ThemeProvider>
-          <div className="App">
-            <Router />
-          </div>
-        </ThemeProvider>
-      </PostsProvider>
-    </AuthProvider>
+    <Provider store={store}>
+      <AuthProvider>
+        <PostsProvider>
+          <ThemeProvider>
+            <div className="App">
+              {/* <Router /> */}
+              <ReduxList />
+            </div>
+          </ThemeProvider>
+        </PostsProvider>
+      </AuthProvider>
+    </Provider>
   );
 }
 

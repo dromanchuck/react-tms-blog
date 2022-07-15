@@ -34,8 +34,8 @@ export const tmsFetch = async (url: string, config: RequestInit) => {
         const refreshedResponse = await fetch(url, {
           ...config,
           headers: {
-            Authorization: `Bearer ${result.access}`,
             ...config?.headers,
+            Authorization: `Bearer ${result.access}`,
           },
         });
 

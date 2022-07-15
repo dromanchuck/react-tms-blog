@@ -14,6 +14,7 @@ import { PostsProvider } from "./context/PostsContext";
 import { AuthContext, AuthProvider } from "./context/AuthContext";
 import { useContext, useEffect } from "react";
 import { tmsFetch } from "./fetch";
+import { AddPost } from "./components/AddPost/AddPost";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ export const Router = () => {
           component={() => <h1>Успешно зарегистрирован</h1>}
         />
         <Route path="/activate/:uid/:token" exact={true} component={Activation} />
+        <Route path="/add-post" exact={true} component={AddPost} />
         <Route component={() => <h1>404</h1>} />
       </Switch>
     </BrowserRouter>
